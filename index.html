@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>After the Rain</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #16212a;
+      --muted: #5c6a73;
+      --line: #d7e0df;
+      --rain: #6f9fa2;
+      --leaf: #6f8f68;
+      --paper: #f7f4ee;
+      --white: #fffdf8;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background: linear-gradient(180deg, #eef4f2 0%, var(--paper) 58%, #f4efe6 100%);
+      line-height: 1.6;
+    }
+
+    header, main, footer {
+      width: min(980px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    header {
+      min-height: 58vh;
+      display: grid;
+      align-content: center;
+      padding: 56px 0 36px;
+    }
+
+    nav {
+      position: absolute;
+      top: 22px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: min(980px, calc(100% - 40px));
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      font-size: 14px;
+    }
+
+    nav a, footer a {
+      color: var(--ink);
+      text-decoration: none;
+      border-bottom: 1px solid currentColor;
+    }
+
+    .brand {
+      font-weight: 700;
+      border-bottom: 0;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(44px, 10vw, 96px);
+      line-height: 0.95;
+      letter-spacing: 0;
+    }
+
+    .lead {
+      max-width: 680px;
+      margin: 28px 0 0;
+      font-size: 20px;
+      color: var(--muted);
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 34px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      min-height: 46px;
+      padding: 0 18px;
+      border: 1px solid var(--ink);
+      background: var(--ink);
+      color: var(--white);
+      text-decoration: none;
+      font-weight: 650;
+    }
+
+    .button.secondary {
+      background: transparent;
+      color: var(--ink);
+    }
+
+    section {
+      padding: 42px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    h2 {
+      margin: 0 0 14px;
+      font-size: 28px;
+      letter-spacing: 0;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 22px;
+    }
+
+    .feature {
+      border: 1px solid var(--line);
+      background: rgba(255, 253, 248, 0.72);
+      padding: 20px;
+      min-height: 150px;
+    }
+
+    .feature h3 {
+      margin: 0 0 8px;
+      font-size: 18px;
+    }
+
+    .feature p, section p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .steps {
+      display: grid;
+      gap: 12px;
+      margin-top: 20px;
+      padding: 0;
+      list-style: none;
+    }
+
+    .steps li {
+      padding: 14px 16px;
+      border-left: 4px solid var(--rain);
+      background: rgba(255, 253, 248, 0.64);
+    }
+
+    footer {
+      padding: 34px 0 44px;
+      color: var(--muted);
+      font-size: 14px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px 24px;
+      justify-content: space-between;
+      border-top: 1px solid var(--line);
+    }
+
+    @media (max-width: 720px) {
+      header {
+        min-height: 62vh;
+      }
+
+      nav {
+        align-items: flex-start;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .lead {
+        font-size: 18px;
+      }
+
+      footer {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav aria-label="Primary">
+    <a class="brand" href="index.html">After the Rain</a>
+    <a href="privacy.html">Privacy Policy</a>
+  </nav>
+
+  <header>
+    <div>
+      <h1>After the Rain</h1>
+      <p class="lead">A calm rotating picture puzzle about restoring each scene one careful piece at a time.</p>
+      <div class="actions">
+        <a class="button" href="#gameplay">Game Overview</a>
+        <a class="button secondary" href="privacy.html">Privacy Policy</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="gameplay">
+      <h2>Picture Puzzle Play</h2>
+      <p>Drag pieces from the tray, place them on the board, and tap to rotate. A level is complete only when every piece is in the right slot and facing the right direction.</p>
+      <ol class="steps">
+        <li>Choose a level or continue from your highest unlocked stage.</li>
+        <li>Study the picture, place each tile, and rotate it into position.</li>
+        <li>Finish before time runs low to earn more stars.</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>What Is Included</h2>
+      <div class="grid">
+        <article class="feature">
+          <h3>50 Levels</h3>
+          <p>Progress through larger grids and stricter goals as the puzzle set grows more demanding.</p>
+        </article>
+        <article class="feature">
+          <h3>Helpful Tools</h3>
+          <p>Use limited previews and hints when the restored picture needs one more clue.</p>
+        </article>
+        <article class="feature">
+          <h3>Local Progress</h3>
+          <p>Unlocked levels, star records, music, sound, and vibration preferences are stored on your device.</p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2>Support</h2>
+      <p>Developer account contact: <a href="mailto:hengbozail@163.com">hengbozail@163.com</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <span>Copyright (c) 2026 hengbozail@163.com. All rights reserved.</span>
+    <a href="privacy.html">Privacy Policy</a>
+  </footer>
+</body>
+</html>
